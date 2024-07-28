@@ -1,0 +1,47 @@
+table,tr,td{
+
+    border-style: groove;
+    border-color: aqua;
+    border-collapse: collapse;
+    margin: 10px;
+    
+}
+.tab{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+tr{}
+td{
+    width: 50px;
+}
+input{
+    color: white;
+    border-color: aqua;
+    height: 40px;
+    width: 300px;
+
+}
+input:hover{
+    border-color: white;
+}
+.add,.sort{
+    margin: 10px;
+    border-style: groove;
+    border-color: white;
+    background-color: aqua;
+}
+.add:hover, .sort:hover{
+    background-color: rgb(18, 91, 91);
+}
+.Data{
+    border-radius: 50px;
+    background-color: rgb(64, 92, 92);
+    height: 300px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}

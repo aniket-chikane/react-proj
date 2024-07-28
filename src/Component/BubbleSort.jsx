@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import "./BubbleSort.css"
 
 function BubbleSort() {
     const [arr,setArr]=useState([]);
@@ -11,6 +12,7 @@ function BubbleSort() {
       
 
     }
+   
     function Sort_elements(){
      let ar=arr;
       for(let i=0;i<ar.length;i++){
@@ -29,15 +31,18 @@ function BubbleSort() {
     }
 
   return (
-    <div>
-        <table>
-          <tr>
+    <div className='Data'>
+      <div>
+        <div className='tab'><table>
+          <tr className='tableRow'>
             {arr.map((arr,index)=><td key={index}>{arr}</td>)}
           </tr>
-        </table>
-        <input type="text" id="numInput" placeholder='Enter Element to add'></input>
-        <button onClick={add_Element}>Add</button>
-        <button onClick={Sort_elements}>Sort</button>
+        </table></div>
+        <div className='inputbox'><input type="text" id="numInput" placeholder='Enter Element to add'></input>
+        </div>
+        <button className="add" onClick={add_Element}>Add</button>
+        <button className='sort' onClick={Sort_elements}>Sort</button>
+    </div>
     </div>
   )
 }
