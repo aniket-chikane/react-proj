@@ -45,3 +45,9 @@ input:hover{
     justify-content: center;
     padding: 50px;
 }
+
+
+.highlight {
+    background-color: rgb(33, 33, 215);
+    color: white;
+}
