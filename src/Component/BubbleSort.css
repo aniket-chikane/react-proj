@@ -31,6 +31,7 @@ td{
     width: 50px;
 }
 input{
+    background-color: rgb(18, 18, 18);
     color: white;
     border-color: aqua;
     height: 40px;
