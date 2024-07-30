@@ -5,6 +5,7 @@ import SortType from './SortType';
 function BubbleSort() {
     const [arr, setArr] = useState([]);
     const [sorting, setSorting] = useState(false);
+    const [sorted, setSorted] = useState(false);
     const [highlight, setHighlight] = useState({i: -1, j: -1});
 
     function add_Element() {
@@ -17,6 +18,7 @@ function BubbleSort() {
             
         }
         else{ 
+            setSorted(false);
             document.getElementById("label1").innerHTML = "";
             document.getElementById('numInput').value = '';
             setArr([...arr, num]);
@@ -27,10 +29,15 @@ function BubbleSort() {
         
     }
     function Sort_elements() {
+        
+        if (sorting ){
+            return; }
+            if (sorted ){
+                document.getElementById("label1").innerHTML = "Already Sorted";
+                return; }  
+        setSorting(true);
         document.getElementById("label1").style.color="aqua";
         document.getElementById("label1").innerHTML = "Sorting";
-        if (sorting)return;       
-        setSorting(true);
         let ar = [...arr];
         let n = ar.length;
         let i = 0;
@@ -54,10 +61,15 @@ function BubbleSort() {
             } else {
                 clearInterval(interval);
                 setSorting(false);
+                setSorted(true);
+                document.getElementById("label1").style.color="lime";
+                document.getElementById("label1").innerHTML = "Sorted";
                 setHighlight({i: -1, j: -1});
             }
         }, 1000);
+        
     }
+   
 
     return (
         <div className='Data'>
