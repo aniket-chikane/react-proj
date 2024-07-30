@@ -90,7 +90,7 @@ function BubbleSort() {
                     </table>
                 </div>
                 <div className='inputbox'>
-                    <input type='text' id='numInput' placeholder='Enter Element to add'></input>
+                    <input type='number' id='numInput' placeholder='Enter Element to add'></input>
                 </div>
                 <button className='add' onClick={add_Element} disabled={sorting}>
                     Add
