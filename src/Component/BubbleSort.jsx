@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './BubbleSort.css';
+import SortType from './SortType';
 
 function BubbleSort() {
     const [arr, setArr] = useState([]);
@@ -8,12 +9,27 @@ function BubbleSort() {
 
     function add_Element() {
         var num = parseInt(document.getElementById('numInput').value);
-        document.getElementById('numInput').value = '';
-        setArr([...arr, num]);
-    }
+        if(document.getElementById('numInput').value===''){
+            document.getElementById("label1").style.color="red";
+            document.getElementById("label1").innerHTML = "Null input";
+            document.getElementById('numInput').focus();
+            document.getElementById('numInput').select();
+            
+        }
+        else{ 
+            document.getElementById("label1").innerHTML = "";
+            document.getElementById('numInput').value = '';
+            setArr([...arr, num]);
+            document.getElementById('numInput').focus();
+            document.getElementById('numInput').select();
+        }
 
+        
+    }
     function Sort_elements() {
-        if (sorting) return; // Prevent starting another sort while already sorting
+        document.getElementById("label1").style.color="aqua";
+        document.getElementById("label1").innerHTML = "Sorting";
+        if (sorting)return;       
         setSorting(true);
         let ar = [...arr];
         let n = ar.length;
@@ -40,12 +56,14 @@ function BubbleSort() {
                 setSorting(false);
                 setHighlight({i: -1, j: -1});
             }
-        }, 500);
+        }, 1000);
     }
 
     return (
         <div className='Data'>
             <div>
+                <h5 className='msg' id = 'label1'></h5>
+                <SortType className="sort-type" type={"Bubble sort"}/>
                 <div className='tab'>
                     <table>
                         <tbody>

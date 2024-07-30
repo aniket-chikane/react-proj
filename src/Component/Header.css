@@ -1,0 +1,24 @@
+.head{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    float: left;
+  
+   
+    
+}
+li{
+    float: left;
+    padding: 15px;
+    cursor: pointer;
+}
+li:hover{
+    background-color: rgb(64, 92, 92);
+}
+ul {
+    width: 100vw;
+    background-color: rgb(64, 92, 92);
+    list-style-type: none;
+    
+}

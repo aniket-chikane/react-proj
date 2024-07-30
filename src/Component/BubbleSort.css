@@ -1,10 +1,24 @@
 table,tr,td{
+    color: white;
+    background-color: rgb(27, 138, 138);
+    -webkit-transition: background-color 2s;
+    -moz-transition:    background-color 2s;
+    -ms-transition:     background-color 2s;
+    -o-transition:      background-color 2s;
+    transition:         background-color 2s;
 
     border-style: groove;
     border-color: aqua;
     border-collapse: collapse;
     margin: 10px;
     
+}
+.type{
+    color:aqua;
+}
+.msg{
+    color: red;
+    height: 10px;
 }
 .tab{
     display: flex;
@@ -47,7 +61,14 @@ input:hover{
 }
 
 
-.highlight {
-    background-color: rgb(33, 33, 215);
+/* .highlight {
+    
+    background-image: linear-gradient(to bottom right, red, yellow);
     color: white;
+} */
+
+
+.highlight{
+    color: red;
+    background-color: white;
 }
